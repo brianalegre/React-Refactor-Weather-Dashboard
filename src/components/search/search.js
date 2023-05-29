@@ -6,7 +6,15 @@ import "./search.css";
 // Search Component
 const Search = () => {
 
-    
+    // Create State from Search
+    const [search, setSearch] = useState(null);
+
+    // UPDATE STATE
+    const handleUserInput = (event) => {
+        const { userInput } = event.target;
+
+        setSearch({ userInput });
+    };
 
     return (
         <div className="searchBar">
