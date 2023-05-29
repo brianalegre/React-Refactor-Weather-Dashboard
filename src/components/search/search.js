@@ -7,18 +7,24 @@ import "./search.css";
 const Search = () => {
 
     // Create State from Search
-    const [search, setSearch] = useState(null);
+    const [search, setSearch] = useState("");
 
-    // UPDATE STATE
+    // Update State
     const handleUserInput = (event) => {
-        const { userInput } = event.target;
-
-        setSearch({ userInput });
+        setSearch(event.target.value)
+        console.log("this is handleUserInput", search)
     };
+
+    console.log('hi')
+
 
     return (
         <div className="searchBar">
-            <input type="text" placeholder="Enter a City Name" />
+            <input type="text"
+                placeholder="Enter a City Name"
+                value={search}
+                onChange={handleUserInput}
+            />
         </div>
     )
 
