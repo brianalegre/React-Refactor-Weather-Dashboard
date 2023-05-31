@@ -20,10 +20,11 @@ const Search = () => {
 
     return (
         <div className="searchBar">
-            <input type="text"
+            <input
+                type="text"
+                onChange={handleUserInput}
                 placeholder="Enter a City Name"
                 value={search}
-                onChange={handleUserInput}
             />
         </div>
     )
