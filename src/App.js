@@ -31,7 +31,7 @@ function App() {
 
   // Get Current Weather from WeatherDataAPI
   const getCurrentWeather = async () => {
-    const url2 = `${WeatherDataAPI}${lat}&lon=${lon}&appid=${APIKey}`;
+    const url2 = `${WeatherDataAPI}${lat}&lon=${lon}&appid=${APIKey}&units=imperial`;
 
     return fetch(url2)
       .then((response) => response.json()
