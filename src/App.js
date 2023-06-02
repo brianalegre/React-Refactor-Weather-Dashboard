@@ -35,6 +35,8 @@ function App() {
 
     return fetch(url2)
       .then((response) => response.json()
+        // Get data needed to display
+        // Weather, Wind, Humidity, Feels Like, Icon
       )
       .catch((error) => console.log(error))
   }
