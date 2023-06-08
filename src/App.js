@@ -10,7 +10,11 @@ function App() {
   const [lat, setLat] = useState("35.6828387");
   const [lon, setLon] = useState("139.7594549");
 
-
+  // Handle On Search Change
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData)
+    const [lat, lon] = searchData.value.split(" ");
+  }
 
   // Get Latitude and Longtidue from WeatherGeoAPI
   const getLatLon = async (citySearch) => {
@@ -48,7 +52,7 @@ function App() {
     )
 
   return (
-    <Search />
+    <Search onSearchChange={handleOnSearchChange} />
   )
 }
 

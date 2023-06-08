@@ -4,7 +4,7 @@ import "./search.css";
 
 
 // Search Component
-const Search = () => {
+const Search = ({ onSearchChange }) => {
 
     // Create State from Search
     const [search, setSearch] = useState("");
